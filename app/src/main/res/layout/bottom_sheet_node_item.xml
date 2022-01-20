@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/node_bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/node_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/node_thumbnail"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true"
+            android:layout_margin="12dp"
+            android:scaleType="fitCenter"
+            tools:ignore="ContentDescription" />
+
+        <RelativeLayout
+            android:id="@+id/node_relative_layout_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/permissions_icon"
+            android:layout_toEndOf="@id/node_thumbnail">
+
+            <RelativeLayout
+                android:id="@+id/node_name_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/node_name_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:ellipsize="middle"
+                    style="@style/textAppearanceSubtitle1" />
+
+                <RelativeLayout
+                    android:id="@+id/node_relative_layout_icon"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/node_name_text">
+
+                    <ImageView
+                        android:id="@+id/node_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        app:tint="?android:attr/textColorSecondary" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/node_name_layout">
+
+                <ImageView
+                    android:id="@+id/node_info_versions_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_versions_small"
+                    android:background="@null"
+                    android:layout_marginEnd="8dp"
+                    android:layout_centerVertical="true"
+                    android:visibility="visible"
+                    app:tint="?android:attr/textColorSecondary" />
+
+                <TextView
+                    android:id="@+id/node_info_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:layout_toEndOf="@id/node_info_versions_icon"
+                    android:ellipsize="middle"
+                    android:textAppearance="@style/TextAppearance.Mega.Body2.Secondary.Variant" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/permissions_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="47dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            app:tint="?android:attr/textColorSecondary"
+            android:background="@null"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="16dp"
+            android:background="@color/grey_012_white_012"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/items_layout_bottom_sheet_node">
+
+            <LinearLayout
+                android:id="@+id/edit_file_option"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/BottomSheetOption"
+                    android:text="@string/title_edit_profile_info"
+                    app:drawableStartCompat="@drawable/ic_file_edit"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="72dp"
+                    android:background="@color/grey_012_white_012" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/properties_option"
+                style="@style/BottomSheetOption"
+                app:drawableStartCompat="@drawable/info_ic"/>
+
+            <TextView
+                android:id="@+id/view_in_folder_option"
+                style="@style/BottomSheetOption"
+                android:text="@string/view_in_folder_label"
+                app:drawableStartCompat="@drawable/ic_upload_pick_file"/>
+
+            <LinearLayout
+                android:id="@+id/option_versions_layout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/versions_option"
+                    style="@style/BottomSheetOption"
+                    android:layout_weight="1"
+                    android:text="@string/title_section_versions"
+                    app:drawableStartCompat="@drawable/ic_g_version" />
+
+                <TextView
+                    android:id="@+id/versions"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="16dp"
+                    android:layout_weight="1"
+                    android:gravity="end|center_vertical"
+                    android:textAppearance="@style/TextAppearance.Mega.Body2.Secondary.Variant" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/favorite_option"
+                style="@style/BottomSheetOption"
+                android:text="@string/file_properties_favourite"
+                app:drawableStartCompat="@drawable/ic_add_favourite"/>
+
+            <LinearLayout
+                android:id="@+id/option_label_layout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="?selectableItemBackground"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <TextView
+                    android:id="@+id/label_option"
+                    style="@style/BottomSheetOption"
+                    android:layout_width="wrap_content"
+                    android:background="@null"
+                    android:text="@string/file_properties_label"
+                    app:drawableStartCompat="@drawable/ic_label" />
+
+                <TextView
+                    android:id="@+id/option_label_current"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_weight="1"
+                    android:drawablePadding="8dp"
+                    android:gravity="end|center_vertical"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:textSize="16sp"
+                    tools:drawableRight="@drawable/ic_circle_label"
+                    tools:text="@string/label_red"
+                    tools:textColor="@color/salmon_400_salmon_300" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="72dp"
+                android:background="@color/grey_012_white_012" />
+
+            <TextView
+                android:id="@+id/open_with_option"
+                style="@style/BottomSheetOption"
+                android:text="@string/external_play"
+                app:drawableStartCompat="@drawable/ic_open_with"/>
+
+            <TextView
+                android:id="@+id/open_folder_option"
+                style="@style/BottomSheetOption"
+                android:text="@string/search_open_location"
+                app:drawableStartCompat="@drawable/ic_upload_pick_file"/>
+
+            <LinearLayout
+                android:id="@+id/separator_open_options"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="72dp"
+                android:orientation="vertical"
+                android:background="@color/grey_012_white_012" />
+
+            <TextView
+                android:id="@+id/download_option"
+                style="@style/BottomSheetOption"
+                android:text="@string/general_save_to_device"
+                app:drawableStartCompat="@drawable/ic_save_to_device"/>
+
+            <TextView
+                android:id="@+id/gallery_option"
+                style="@style/BottomSheetOption"
+                android:text="@string/general_save_to_gallery"
+                android:visibility="gone"
+                app:drawableStartCompat="@drawable/ic_save_gallery"
+                tools:visibility="visible" />
+
+            <LinearLayout
+                android:id="@+id/option_offline_layout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/offline_option"
+                    style="@style/BottomSheetOption"
+                    android:layout_width="wrap_content"
+                    android:text="@string/file_properties_available_offline"
+                    app:drawableStartCompat="@drawable/ic_save_offline"/>
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/file_properties_switch"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="16dp"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/separator_download_options"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="72dp"
+                android:orientation="vertical"
+                android:background="@color/grey_012_white_012" />
+
+            <TextView
+                android:id="@+id/link_option"
+                style="@style/BottomSheetOption"
+                app:drawableStartCompat="@drawable/link_ic"/>
+
+            <TextView
+                android:id="@+id/remove_link_option"
+                style="@style/BottomSheetOption"
+                android:text="@string/context_remove_link_menu"
+                app:drawableStartCompat="@drawable/ic_remove_link"/>
+
+            <TextView
+                android:id="@+id/share_option"
+                style="@style/BottomSheetOption"
+                android:text="@string/general_share"
+                app:drawableStartCompat="@drawable/ic_social_share_white"/>
+
+            <TextView
+                android:id="@+id/share_folder_option"
+                style="@style/BottomSheetOption"
+                android:text="@string/context_share_folder"
+                app:drawableStartCompat="@drawable/ic_share"/>
+
+            <TextView
+                android:id="@+id/send_chat_option"
+                style="@style/BottomSheetOption"
+                android:text="@string/context_send_file_to_chat"
+                app:drawableStartCompat="@drawable/ic_send_to_contact"/>
+
+            <TextView
+                android:id="@+id/clear_share_option"
+                style="@style/BottomSheetOption"
+                android:text="@string/context_clean_shares_menu"
+                app:drawableStartCompat="@drawable/ic_remove_share"/>
+
+            <LinearLayout
+                android:id="@+id/separator_share_options"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="72dp"
+                android:orientation="vertical"
+                android:background="@color/grey_012_white_012" />
+
+            <TextView
+                android:id="@+id/rename_option"
+                style="@style/BottomSheetOption"
+                android:text="@string/context_rename"
+                app:drawableStartCompat="@drawable/ic_rename"/>
+
+            <TextView
+                android:id="@+id/move_option"
+                style="@style/BottomSheetOption"
+                android:text="@string/general_move_to"
+                app:drawableStartCompat="@drawable/ic_move"/>
+
+            <TextView
+                android:id="@+id/copy_option"
+                style="@style/BottomSheetOption"
+                android:text="@string/context_copy"
+                app:drawableStartCompat="@drawable/ic_menu_copy"/>
+
+            <TextView
+                android:id="@+id/restore_option"
+                style="@style/BottomSheetOption"
+                android:text="@string/context_restore"
+                app:drawableStartCompat="@drawable/ic_restore"/>
+
+            <LinearLayout
+                android:id="@+id/separator_modify_options"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="72dp"
+                android:orientation="vertical"
+                android:background="@color/grey_012_white_012" />
+
+            <TextView
+                android:id="@+id/leave_share_option"
+                style="@style/BottomSheetOption.Red"
+                android:text="@string/alert_leave_share"
+                app:drawableStartCompat="@drawable/leave_share_ic"/>
+
+            <TextView
+                android:id="@+id/rubbish_bin_option"
+                style="@style/BottomSheetOption.Red"
+                android:text="@string/context_move_to_trash"
+                app:drawableStartCompat="@drawable/ic_rubbish_bin"/>
+
+            <TextView
+                android:id="@+id/remove_option"
+                style="@style/BottomSheetOption.Red"
+                android:text="@string/context_remove"
+                app:drawableStartCompat="@drawable/ic_remove"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

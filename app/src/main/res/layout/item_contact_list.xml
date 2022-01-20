@@ -1,0 +1,109 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:rounded="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contact_list_item_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="72dp"
+    android:descendantFocusability="blocksDescendants" >
+
+    <RelativeLayout
+        android:id="@+id/contact_list_relative_layout_avatar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="18dp"
+        android:layout_centerVertical="true">
+
+        <mega.privacy.android.app.components.RoundedImageView
+            android:id="@+id/contact_list_thumbnail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:layout_centerInParent="true"
+            rounded:corner_radius="20dp" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/verified_icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_verified"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:id="@+id/contact_list_three_dots_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true">
+
+        <ImageView
+            android:id="@+id/contact_list_three_dots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_dots_vertical_grey"
+            app:tint="?android:attr/textColorSecondary" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/contact_list_decline"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_decline"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_centerVertical="true"
+            app:tint="?attr/colorControlNormal" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/contact_list_relative_layout_avatar"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="13dp">
+
+        <mega.privacy.android.app.components.twemoji.EmojiTextView
+            android:id="@+id/contact_list_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.Mega.Subtitle1"
+            android:maxLines="1"
+            rounded:emojiSize="14sp"/>
+
+        <ImageView
+            android:id="@+id/contact_list_drawable_state"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_alignTop="@id/contact_list_name"
+            android:layout_toRightOf="@id/contact_list_name"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="6dp"
+            android:background="@null"
+            tools:src="@drawable/ic_offline_light" />
+
+        <mega.privacy.android.app.components.MarqueeTextView
+            android:id="@+id/contact_list_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/contact_list_name"
+            android:textAppearance="@style/TextAppearance.Mega.Subtitle2.Secondary"
+            android:ellipsize="none"
+            android:singleLine="true" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="settings_storage_download_location_values">
+        <item>1001</item>
+        <item>1002</item>
+    </string-array>
+    
+	<string-array name="settings_camera_upload_how_to_values">
+		<item>1001</item>
+		<item>1002</item>
+	</string-array>
+
+	<string-array name="settings_camera_upload_file_upload_values">
+		<item>1001</item>
+		<item>1002</item>
+		<item>1003</item>
+	</string-array>
+
+	<string-array name="settings_chat_status_values">
+		<item>3</item>
+		<item>2</item>
+		<item>4</item>
+		<item>1</item>
+	</string-array>
+
+	<string-array name="settings_chat_upload_quality_values">
+		<item>0</item>
+		<item>1</item>
+		<item>2</item>
+		<item>3</item>
+	</string-array>
+
+	<string-array name="settings_video_upload_quality_values">
+		<item>0</item>
+		<item>1</item>
+		<item>2</item>
+		<item>3</item>
+	</string-array>
+	
+	<string-array name="theme_list_array">
+		<item>@string/theme_light</item>
+		<item>@string/theme_dark</item>
+		<item>@string/theme_battery_saver</item>
+	</string-array>
+
+	<string-array name="theme_entry_array">
+		<item>light</item>
+		<item>dark</item>
+		<item>default</item>
+	</string-array>
+
+	<string-array name="settings_start_screen">
+		<item>@string/section_cloud_drive</item>
+		<item>@string/section_photo_sync</item>
+		<item>@string/home_section</item>
+		<item>@string/section_chat</item>
+		<item>@string/title_shared_items</item>
+	</string-array>
+</resources>

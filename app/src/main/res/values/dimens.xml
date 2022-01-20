@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="standard_margin">10dp</dimen>
+    <dimen name="standard_margin_double">20dp</dimen>
+    <dimen name="standard_margin_half">5dp</dimen>
+    <dimen name="thumb_size">60dp</dimen>
+    <dimen name="tab_host_default_height">48dp</dimen>
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="fab_button_diameter">56dp</dimen>
+    <dimen name="fab_button_small_diameter">40dp</dimen>
+    <dimen name="fab_button_margin_bottom">16dp</dimen>
+    <dimen name="fab_button_margin_right">16dp</dimen>
+    <dimen name="elevation_low">6dp</dimen>
+    <dimen name="elevation_high">12dp</dimen>
+
+    <dimen name="elevation_upgrade_low">2dp</dimen>
+    <dimen name="elevation_upgrade_high">8dp</dimen>
+
+    <dimen name="status_bar_height">24dp</dimen>
+    <dimen name="left_margin_back_arrow">16dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+
+
+    <dimen name="width_image_pending_message_one_digit">20dp</dimen>
+    <dimen name="width_image_pending_message_two_digits">28dp</dimen>
+    <dimen name="width_image_pending_message_three_digits">36dp</dimen>
+    <dimen name="width_image_pending_message_four_digits">44dp</dimen>
+
+    <dimen name="elevation_fab_chat">6dp</dimen>
+    <dimen name="translationZ_fab_chat">12dp</dimen>
+    <dimen name="marginTop_fab_chat">0dp</dimen>
+
+    <dimen name="emoji_grid_view_column_width">35dp</dimen>
+    <dimen name="emoji_grid_view_spacing">6dp</dimen>
+
+    <!-- Floating Search View -->
+    <dimen name="search_bar_left_icon_left_margin">4dp</dimen>
+    <dimen name="search_bar_search_input_left_margin">20dp</dimen>
+    <dimen name="search_view_corner_radius">3dp</dimen>
+    <dimen name="search_bar_text_size">16sp</dimen>
+    <dimen name="square_button_icon_size">24dp</dimen>
+    <dimen name="square_button_size">48dp</dimen>
+    <dimen name="square_button_padding">12dp</dimen>
+
+    <!-- Homepage Categories -->
+    <dimen name="text_photo_span">8dp</dimen>
+    <dimen name="category_padding">16dp</dimen>
+
+    <!-- Homepage Fab -->
+    <dimen name="fab_size_normal">56dp</dimen>
+    <dimen name="fab_size_small">48dp</dimen>
+    <dimen name="label_padding">6dp</dimen>
+    <dimen name="label_margin_end">16dp</dimen>
+    <dimen name="fab_margin_span">16dp</dimen>
+    <dimen name="fab_margin_vertical">24dp</dimen>
+
+    <dimen name="icon_selected_size">23dp</dimen>
+    <dimen name="icon_selected_margin">7dp</dimen>
+
+    <dimen name="grid_node_item_width">172dp</dimen>
+    <dimen name="grid_node_list_padding_bottom">65dp</dimen>
+    <dimen name="grid_node_default_thumbnail_size">88dp</dimen>
+
+    <dimen name="photo_item_width">86dp</dimen>
+    <dimen name="photo_grid_margin">1dp</dimen>
+    <dimen name="photo_selected_icon_width">16dp</dimen>
+    <dimen name="photo_selected_icon_margin">4dp</dimen>
+    <dimen name="photo_selected_icon_round_corner_radius">2dp</dimen>
+    <dimen name="photo_item_padding">2dp</dimen>
+    <dimen name="photo_selected_border_width">0.5dp</dimen>
+
+    <dimen name="homepage_node_grid_round_corner_radius">5dp</dimen>
+
+    <dimen name="empty_data_font_size">14sp</dimen>
+
+    <dimen name="cu_fragment_ic_selected_size_large">23dp</dimen>
+    <dimen name="cu_fragment_ic_selected_margin_large">8dp</dimen>
+    <dimen name="cu_fragment_ic_selected_size_small">16dp</dimen>
+    <dimen name="cu_fragment_ic_selected_margin_small">4dp</dimen>
+    <dimen name="cu_fragment_selected_padding">1dp</dimen>
+    <dimen name="cu_fragment_selected_round_corner_radius">5dp</dimen>
+    <dimen name="cu_fragment_image_margin_small">1dp</dimen>
+    <dimen name="cu_fragment_image_margin_large">2dp</dimen>
+
+    <dimen name="av_player_file_name_margin_top_portrait">16dp</dimen>
+    <dimen name="av_player_file_name_margin_bottom_portrait">14dp</dimen>
+    <dimen name="av_player_file_name_margin_bottom_landscape">5dp</dimen>
+    <dimen name="av_player_control_buttons_margin_top_portrait">14dp</dimen>
+    <dimen name="av_player_control_buttons_margin_bottom_portrait">20dp</dimen>
+    <dimen name="av_player_control_buttons_margin_bottom_landscape">5dp</dimen>
+
+    <dimen name="audio_player_track_name_margin_bottom_small">10dp</dimen>
+    <dimen name="audio_player_track_name_margin_bottom_large">28dp</dimen>
+    <dimen name="audio_player_main_controller_height">248dp</dimen>
+    <dimen name="audio_player_playlist_controller_height">106dp</dimen>
+    <dimen name="audio_player_mini_controller_height">64dp</dimen>
+
+    <dimen name="playlist_non_default_thumbnail_size">40dp</dimen>
+    <dimen name="playlist_non_default_thumbnail_margin_start">16dp</dimen>
+    <dimen name="playlist_default_thumbnail_size">48dp</dimen>
+    <dimen name="playlist_default_thumbnail_margin_start">12dp</dimen>
+
+    <dimen name="bottom_navigation_view_height">56dp</dimen>
+
+    <dimen name="cu_view_type_button_height">36dp</dimen>
+    <dimen name="cu_view_type_button_vertical_margin">8dp</dimen>
+
+    <!-- Dark mode refactor start -->
+
+    <dimen name="btn_padding_vertical">10dp</dimen>
+    <dimen name="btn_padding_horizontal">16dp</dimen>
+
+    <dimen name="linear_progress_size">4dp</dimen>
+
+    <dimen name="toolbar_elevation">4dp</dimen>
+    <dimen name="drawer_item_height">48dp</dimen>
+
+    <dimen name="bottom_sheet_drawable_padding">32dp</dimen>
+    <!-- My account page button padding -->
+    <dimen name="btn_21_padding_horizontal">21dp</dimen>
+
+    <dimen name="btn_transparent_padding_vertical">8dp</dimen>
+
+    <dimen name="meeting_bottom_floating_panel_fab_size">48dp</dimen>
+    <dimen name="meeting_bottom_floating_panel_peek_height">115dp</dimen>
+
+    <dimen name="bottom_sheet_item_height">56dp</dimen>
+    <dimen name="bottom_sheet_item_padding_horizontal">18dp</dimen>
+    <dimen name="bottom_sheet_item_drawable_padding">32dp</dimen>
+    <dimen name="bottom_sheet_item_divider_margin_start">72dp</dimen>
+    <dimen name="bottom_sheet_landscape_width">360dp</dimen>
+
+    <dimen name="card_margin_portrait">8dp</dimen>
+    <dimen name="card_margin_landscape">3dp</dimen>
+    <dimen name="cu_margin_bottom">50dp</dimen>
+
+    <dimen name="line_number_padding">6dp</dimen>
+    <dimen name="text_editor_padding_top">8dp</dimen>
+    <dimen name="text_editor_padding_bottom">120dp</dimen>
+    <dimen name="text_editor_padding_without_nLines">24dp</dimen>
+    <dimen name="text_editor_padding_start_with_nLines">36dp</dimen>
+    <dimen name="text_editor_padding_end_with_nLines">12dp</dimen>
+    <dimen name="line_number_size">10sp</dimen>
+
+    <dimen name="image_contact_size">40dp</dimen>
+    <dimen name="image_contact_text_size">20sp</dimen>
+    <dimen name="image_group_size">26dp</dimen>
+    <dimen name="image_group_text_size">15sp</dimen>
+    <dimen name="image_group_border_size">1dp</dimen>
+</resources>

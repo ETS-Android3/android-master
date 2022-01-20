@@ -1,0 +1,42 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:padding="20dp">
+
+	<TextView
+		android:id="@+id/dialog_cancel_title"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="left"
+		android:textSize="18sp"
+		android:textColor="?android:attr/textColorPrimary"
+		android:textAllCaps="true"
+		android:fontFamily="sans-serif-light"
+		android:textStyle="bold"
+		android:text="@string/action_cancel_subscriptions"/>
+
+	<TextView
+		android:id="@+id/dialog_cancel_text"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/dialog_cancel_subscriptions"
+		android:layout_below="@+id/dialog_cancel_title"
+		android:layout_marginTop="20dp"
+		android:textColor="?android:attr/textColorSecondary"
+		android:textSize="16sp"/>
+
+	<EditText
+		android:id="@+id/dialog_cancel_feedback"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="top|left"
+		android:inputType="textMultiLine"
+		android:layout_below="@id/dialog_cancel_text"
+		android:hint="@string/hint_cancel_subscriptions"
+		android:scrollHorizontally="false"
+		android:theme="@style/ThemeOverlay.ColorControlSecondary"
+		android:textSize="14sp"
+		android:textColor="?android:attr/textColorPrimary"
+		android:layout_marginTop="15dp"/>
+
+</RelativeLayout>

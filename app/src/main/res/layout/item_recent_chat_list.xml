@@ -1,0 +1,193 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/recent_chat_list_item_layout"
+    android:layout_width="match_parent"
+    android:layout_height="88dp"
+    android:descendantFocusability="blocksDescendants"
+    android:paddingEnd="12dp">
+
+    <RelativeLayout
+        android:id="@+id/recent_chat_list_relative_layout_avatar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="16dp">
+
+        <mega.privacy.android.app.components.RoundedImageView
+            android:id="@+id/recent_chat_list_thumbnail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:scaleType="fitCenter"
+            app:border_width="0dp"
+            app:corner_radius="30dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/three_dots_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true">
+
+        <ImageButton
+            android:id="@+id/recent_chat_list_three_dots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="2dp"
+            android:background="@null"
+            android:src="@drawable/ic_dots_vertical_grey"
+            app:tint="?android:attr/textColorSecondary" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toStartOf="@+id/three_dots_layout"
+        android:layout_toEndOf="@+id/recent_chat_list_relative_layout_avatar"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:id="@+id/first_line_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <mega.privacy.android.app.components.twemoji.EmojiTextView
+                android:id="@+id/recent_chat_list_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="16dp"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textAppearance="?attr/textAppearanceSubtitle1"
+                app:emojiSize="14sp"
+                tools:text="User name" />
+
+            <ImageView
+                android:id="@+id/recent_chat_list_contact_state"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="6dp"
+                tools:src="@drawable/ic_offline_light" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="4dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/recent_chat_list_call_in_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:background="@null"
+                    android:src="@drawable/ongoing_call_green_item" />
+
+                <ImageView
+                    android:id="@+id/recent_chat_list_private_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@null"
+                    android:src="@drawable/ic_private_chat"
+                    app:tint="?attr/textColorHint" />
+
+                <ImageView
+                    android:id="@+id/recent_chat_list_mute_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:src="@drawable/ic_mute_list"
+                    app:tint="?attr/textColorHint" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/second_line_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/first_line_layout"
+            android:orientation="horizontal">
+
+            <mega.privacy.android.app.components.twemoji.EmojiTextView
+                android:id="@+id/recent_chat_list_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="16dp"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textAppearance="@style/TextAppearance.Mega.Body2.Secondary"
+                app:emojiSize="12sp"
+                tools:text="last message" />
+
+            <LinearLayout
+                android:id="@+id/last_message_voice_clip_or_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@+id/recent_chat_list_unread_circle"
+                android:layout_toEndOf="@+id/recent_chat_list_content"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/last_message_voice_clip_or_location_ic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null" />
+
+                <TextView
+                    android:id="@+id/last_message_voice_clip_or_location_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/recent_chat_list_unread_circle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="center_vertical|end"
+                android:scaleType="fitCenter">
+
+                <TextView
+                    android:id="@+id/recent_chat_list_unread_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:paddingBottom="1dp"
+                    android:textAppearance="@style/TextAppearance.Mega.Body2.Variant2" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/recent_chat_list_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/second_line_layout"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="2dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textAppearance="@style/TextAppearance.Mega.Caption.Secondary.Variant"
+            tools:text="last message time" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

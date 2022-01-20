@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/file_explorer_item_layout"
+    android:layout_width="match_parent"
+    android:layout_height="72dp"
+    android:descendantFocusability="blocksDescendants">
+
+    <ImageView
+        android:id="@+id/file_explorer_thumbnail"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_centerVertical="true"
+        android:scaleType="fitCenter" />
+
+    <HorizontalScrollView
+        android:id="@+id/scroll_view_filename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:layout_toEndOf="@id/file_explorer_thumbnail"
+        android:layout_toStartOf="@id/file_explorer_permissions"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <TextView
+            android:id="@+id/file_explorer_filename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:ellipsize="middle"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:textAppearance="?attr/textAppearanceSubtitle1" />
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/file_explorer_filesize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/scroll_view_filename"
+        android:layout_marginEnd="12dp"
+        android:layout_toEndOf="@id/file_explorer_thumbnail"
+        android:layout_alignStart="@id/scroll_view_filename"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textAppearance="@style/TextAppearance.Mega.Body2.Secondary" />
+
+    <ImageView
+        android:id="@+id/file_explorer_permissions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="16dp"
+        android:background="@null"
+        android:paddingStart="10dp"
+        android:src="@drawable/ic_permissions_full_access"
+        android:visibility="gone"
+        app:tint="?android:attr/textColorSecondary" />
+
+</RelativeLayout>
+

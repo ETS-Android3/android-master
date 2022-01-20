@@ -1,0 +1,141 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinator_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/fragment_container_file_explorer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/app_bar_layout_explorer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:elevation="0dp">
+
+                <com.google.android.material.appbar.MaterialToolbar
+                    android:id="@+id/toolbar_explorer"
+                    android:layout_width="match_parent"
+                    android:background="@android:color/transparent"
+                    android:layout_height="?attr/actionBarSize"/>
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/sliding_tabs_file_explorer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.Mega.TabLayout"/>
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <mega.privacy.android.app.components.CustomViewPager
+                android:id="@+id/explorer_tabs_pager"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <FrameLayout
+                android:id="@+id/cloudDriveFrameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/file_logging_in_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_marginTop="112dp"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/file_login_mega_logo"
+                android:layout_width="144dp"
+                android:layout_height="144dp"
+                android:src="@drawable/logo_loading_ic"
+                app:tint="@color/red_600_white_087" />
+
+            <TextView
+                android:id="@+id/file_login_query_signup_link_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="@string/login_querying_signup_link" />
+
+            <TextView
+                android:id="@+id/file_login_generating_keys_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="@string/login_generating_key" />
+
+            <TextView
+                android:id="@+id/file_login_confirm_account_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/login_confirming_account" />
+
+            <TextView
+                android:id="@+id/file_login_logging_in_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/login_connecting_to_server" />
+
+            <TextView
+                android:id="@+id/file_login_fetch_nodes_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/download_updating_filelist" />
+
+            <TextView
+                android:id="@+id/file_login_prepare_nodes_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/login_preparing_filelist" />
+
+            <ProgressBar
+                android:id="@+id/file_login_fetching_nodes_bar"
+                style="@style/MEGAProgressBarLogin"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp" />
+
+            <ProgressBar
+                android:id="@+id/file_login_progress_bar"
+                style="?android:attr/progressBarStyleLargeInverse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp" />
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+    android:id="@+id/fab_file_explorer"
+    android:layout_width="@dimen/fab_button_diameter"
+    android:layout_height="@dimen/fab_button_diameter"
+    android:elevation="@dimen/elevation_low"
+    android:layout_margin="16dp"
+    android:src="@drawable/ic_send_white"
+    android:stateListAnimator="@anim/button_elevation"
+    android:tint="@android:color/white"
+    android:layout_gravity="bottom|right|end"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
